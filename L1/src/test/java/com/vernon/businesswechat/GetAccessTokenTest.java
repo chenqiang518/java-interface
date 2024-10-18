@@ -36,4 +36,7 @@ public class GetAccessTokenTest {
 
 
     }
+
+    // 生成allure报告: mvn clean test -Dtest=com.vernon.businesswechat.GetAccessTokenTest allure:report
+    // 查看allure报告: mvn allure:serve
 }
