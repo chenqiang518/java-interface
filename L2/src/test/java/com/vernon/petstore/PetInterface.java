@@ -23,19 +23,8 @@ public class PetInterface {
         return instance;
     }
     public int getId() {
-        return id;
+        return ++id;
     }
-/*    public String getRemote() {
-        return REMOTE;
-    }*/
-    /*private static String REMOTE;
-
-    @BeforeAll
-    static void beforeAll() {
-        REMOTE="https://petstore.swagger.io/v2";
-        RestAssured.proxy = host("127.0.0.1").withPort(8888);
-        RestAssured.useRelaxedHTTPSValidation();
-    }*/
     // 新增: POST /pet
     public Response add(PetDTO petDTO) {
         String newPet = "{\n" +
