@@ -1,6 +1,7 @@
 package com.vernon.body.json;
 
-import net.minidev.json.JSONObject;
+
+import com.alibaba.fastjson2.JSONObject;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 
