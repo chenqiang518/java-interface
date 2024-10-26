@@ -24,6 +24,10 @@
         <maven-surefire-plugin.version>3.0.0</maven-surefire-plugin.version>
         <rest-assured.version>5.3.0</rest-assured.version>
         <json-path.version>2.8.0</json-path.version>
+
+        <slf4j.version>1.7.32</slf4j.version>
+        <logback.version>1.2.10</logback.version>
+
         <!-- allure报告 -->
         <allure.version>2.21.0</allure.version>
         <aspectj.version>1.9.19</aspectj.version>
@@ -80,6 +84,20 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- slf4j 日志依赖信息 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
         <!-- 阿里开源JSON解析包 -->
         <dependency>
             <groupId>com.alibaba.fastjson2</groupId>
@@ -105,13 +123,17 @@
             <version>${json-path.version}</version>
         </dependency>
         <!-- Jackson 依赖 用来解析JSON对象 -->
-        <!--
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.13.0</version>
         </dependency>
-        -->
+        <!-- Yaml依赖 以读取与解析yaml文件-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+            <version>2.13.0</version>
+        </dependency>
 
         <!-- IOUtils 用于读取解析xml文件-->
         <dependency>
